@@ -16,9 +16,10 @@ vector<int> solution(int brown, int yellow) {
     for (int i=1; i<=sqrt(yellow); i++) {
         int height = i;
         int width = yellow / i;
+        if (height * width != yellow) continue;
 
         int result = (width + 2) * 2 + height * 2;
-        if (yellow + result == brown + yellow) {
+        if (result == brown) {
             answer.push_back(width + 2);
             answer.push_back(height + 2);
             break;
