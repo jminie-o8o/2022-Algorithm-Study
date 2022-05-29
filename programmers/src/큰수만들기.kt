@@ -1,6 +1,6 @@
 import kotlin.math.max
 
-class Solution {
+class Solution큰수만들기 {
     fun solution(number: String, k: Int): String {
         var answer = StringBuilder()
         var index = 0
@@ -21,7 +21,7 @@ class Solution {
     }
 }
 
-// 완전 탐색풀이 -> 메모리 부족으로 ㅋ통과 못함
+// 완전 탐색풀이 -> 메모리 부족으로 통과 못함
 // 인덱스만큼 뒷자리와 맨 앞자리 비교하기
 // 맨뒷값이 추가하려는 값보다 큰지
 
