@@ -13,7 +13,7 @@ public class Solution카펫 {
                 if (i > value / i) {
                     break;
                 } else {
-                    if ((value / i - 2) * (i - 2) == yellow) {
+                    if ((value  / i - 2) * (i - 2) == yellow) {
                         pair[0] = value / i;
                         pair[1] = i;
                     }
