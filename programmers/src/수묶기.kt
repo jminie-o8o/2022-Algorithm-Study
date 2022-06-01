@@ -19,7 +19,7 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     var minusIndex = 0
     var answer = 0
     while (true) {
-        // 두개가 존재할때
+        // 두개 이상이 존재할때
         if (plusIndex + 1 <= plusList.size - 1) {
             if (plusList[plusIndex] != 1 && plusList[plusIndex + 1] != 1)
                 answer += plusList[plusIndex] * plusList[plusIndex + 1]

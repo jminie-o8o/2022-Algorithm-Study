@@ -16,16 +16,15 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val timeTable = MutableList<Boolean>(100001) { true }
 
     hashMap.keys.forEach { time ->
-        hashMap[time]?.forEach loop1@ {
-            for (i in it.first until it.first + time) {
-                if (!timeTable[i]) {
-                    return@loop1
+        loop@ for (i in hashMap[time]!!.indices){
+            for (j in hashMap[time]!![i].first until hashMap[time]!![i].first + time) {
+                if (!timeTable[j]) {
+                    continue@loop
                 }
             }
-            for (i in it.first until it.first + time) {
-                timeTable[i] = false
+            for (j in hashMap[time]!![i].first until hashMap[time]!![i].first + time) {
+                timeTable[j] = false
             }
-           // println("${it.first} , ${it.second} ")
             answer++
         }
     }
