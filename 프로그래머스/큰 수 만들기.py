@@ -1,5 +1,4 @@
 def solution(number, k):
-    answer = ''
     number_list = list(number)
     stack = []
     for number in number_list:
