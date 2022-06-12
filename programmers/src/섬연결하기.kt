@@ -27,14 +27,11 @@ class Solution섬연결하기 {
     }
 
     private fun unionParent(parentList: IntArray, aNode: Int, bNode: Int) {
-        val x = findParent(parentList, aNode)
-        val y = findParent(parentList, bNode)
-        if(x<y){
-            parentList[y]=x
-        }
-        else{
-            parentList[x]=y
-        }
+        val aParent = findParent(parentList, aNode)
+        val bParent = findParent(parentList, bNode)
+        val newParent = min(aParent,bParent)
+        parentList[aParent] = newParent
+        parentList[bParent] = newParent
     }
 }
 
@@ -47,7 +44,7 @@ class Solution섬연결하기 {
 
 // 모든 간선이 이어져있는지에 대한 확인이 불가하다.
 
-
+//
 //class Solution {
 //    fun solution(n: Int, costs: Array<IntArray>): Int {
 //        var answer = 0
