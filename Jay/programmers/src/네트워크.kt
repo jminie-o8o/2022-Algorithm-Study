@@ -44,7 +44,7 @@
 //        }
 //    }
 
-class Solution {
+class Solution네트워크 {
     lateinit var parentList: IntArray
     fun solution(n: Int, computers: Array<IntArray>): Int {
 
