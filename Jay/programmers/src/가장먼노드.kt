@@ -2,7 +2,7 @@ import java.lang.Math.max
 import java.util.LinkedList
 
 
-class Solution {
+class Solution가장먼노드 {
     private lateinit var map: Array<MutableList<Int>>
     private lateinit var visited: Array<Int>
     var answer = 0
